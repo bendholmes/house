@@ -1,5 +1,5 @@
 {
-  "name": "ThreeWay SkiWay",
+  "name": "house",
   "version": "1.0.0",
   "description": "Information about the ThreeWay Skiway chalet in SilverStar, BC",
   "scripts": {
@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/josephdyer/skeleventy.git"
+    "url": "https://github.com/bendholmes/house.git"
   },
-  "author": "Joseph Dyer",
+  "author": "tessamconway",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
