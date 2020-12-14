@@ -1,10 +1,10 @@
 {
-    "name": "ThreeWay SkiWay",
+    "name": "Silver Chalet",
     "url": "https://netlify.app",
     "author": {
-        "name": "Max Power",
-        "email": "hello@maxpower.com",
-        "handle": "@maxpower",
+        "name": "Tessa and Ben",
+        "email": "house@bdholmes.com",
+        "handle": "@starchalet",
         "avatar": "/images/blog/author.jpg"
     },
     "images": {
@@ -26,8 +26,6 @@
         "country": "GB"
     },
     "contact": {
-        "phone": "123 456 789",
-        "mobile": "(+44) 1234 5678",
-        "email": "hello@maxpower.com"
+        "email": "house@bdholmes.com"
     }
 }

@@ -1,4 +1,4 @@
-# ThreeWay SkiWay
+# Silver Chalet
 
 Built on top of [Skeleventy](https://skeleventy.netlify.com) - a skeleton boilerplate built with Eleventy and TailwindCSS.
 
