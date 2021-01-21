@@ -88,7 +88,7 @@ title: We're building a chalet!
             <div class="container mx-auto">
                 <div class="flex flex-wrap px-6">
                     <div class="w-full lg:w-1/2   md:px-4 lg:px-6 py-5">
-                    {% set post = collections.blog[collections.blog.length-1] %}
+                    {% set post = collections.blog[0] %}
                         <article class="article-card mb-8 mx-4 flex-1 bg-white overflow-hidden rounded-lg shadow-lg">
                             {# featured post image & category #}
                             {% if post.data.featured_image %}
