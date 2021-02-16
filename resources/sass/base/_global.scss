@@ -3,12 +3,9 @@
 
 // global vars
 $milestone-base-color: #cccccc;
-$milestone-progress-color: #bbbbbb;
-$milestone-10-color: #ffbc42;
-$milestone-25-color: #d81159;
-$milestone-50-color: #8f2d56;
-$milestone-80-color: #218380;
-$milestone-100-color: #73d2de;
+$milestone-bar-color: #bbbbbb;
+$milestone-progress-color: #ffbc42;
+$milestone-completed-color: #218380;
 
 
 .vefs-milestone-wrapper {
@@ -49,7 +46,7 @@ $milestone-100-color: #73d2de;
 
           &.left {
             order: 0;
-            background-color: $milestone-progress-color;
+            background-color: $milestone-bar-color;
           }
         }
       }
@@ -69,7 +66,10 @@ $milestone-100-color: #73d2de;
           transition: all 0.25s ease-out;
 
           &.completed {
-            background-color: $milestone-progress-color;
+            background-color: $milestone-bar-color;
+          }
+          &.progress {
+            background-color: $milestone-bar-color;
           }
         }
       }
@@ -86,7 +86,10 @@ $milestone-100-color: #73d2de;
         position: relative;
         color: $milestone-base-color;
 
-        &.colored {
+        &.completed {
+          color: $milestone-completed-color;
+        }
+        &.progress {
           color: $milestone-progress-color;
         }
       }
@@ -96,13 +99,17 @@ $milestone-100-color: #73d2de;
       position: absolute;
       transform: translate(-50%, 0);
 
-      @mixin milestone( $mark, $color) {
+      @mixin milestone( $mark) {
         &__#{$mark} {
           left: #{$mark + '%'};
 
           .dot {
-            &.colored {
-              background-color: rgba($color, 1);
+            &.completed {
+              background-color: rgba($milestone-completed-color, 1);
+              transition: all 0.25s ease-out;
+            }
+            &.progress {
+              background-color: rgba($milestone-progress-color, 1);
               transition: all 0.25s ease-out;
             }
           }
@@ -112,21 +119,7 @@ $milestone-100-color: #73d2de;
       &.milestone {
         // generate position and color of each milestone value
         @for $i from 0 to 101 {
-          @if $i >= 0 and $i <= 20 {
-            @include milestone($i, $milestone-10-color);
-          }
-          @if $i > 20 and $i <= 40 {
-            @include milestone($i, $milestone-25-color);
-          }
-          @if $i > 40 and $i <= 60 {
-            @include milestone($i, $milestone-50-color);
-          }
-          @if $i > 60 and $i <= 80 {
-            @include milestone($i, $milestone-80-color);
-          }
-          @if $i > 80 and $i <= 100 {
-            @include milestone($i, $milestone-100-color);
-          }
+            @include milestone($i);
         }
       }
     }
